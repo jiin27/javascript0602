@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상속기초</title>
+    <script>
+        class Bird{
+            constructor(){
+                this.wing=2;
+                this.color="";
+            }
+            fly(){
+                console.log("새가 날아요");
+            }
+        }
+
+        //오리 클래스가, 예전에 작성해놓은 Bird클래스를 상속받은 것.
+        class Duck extends Bird{
+            constructor(){
+                super(); //상속할 대상인 부모님super의 생성자 호출이 먼저!
+                this.wing=4;
+                this.color="white";
+            }
+            fly(){ //override (업그레이드) - 부모의 속성을 받지 않고 상속자인 자식이 본인의 특성을 직접 지정하는 것. 자식의 속성이 우선순위가 된다.
+                console.log("오리가 날아요");
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
